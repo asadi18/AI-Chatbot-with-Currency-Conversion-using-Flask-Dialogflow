@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AquaBasic - Currency ChatBot</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background-color: #121212;
+        color: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 40px 20px;
+      }
+
+      h1 {
+        font-size: 3em;
+        margin-bottom: 0.2em;
+        color: #00bcd4;
+      }
+
+      p.description {
+        max-width: 800px;
+        text-align: center;
+        font-size: 1.2em;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .features {
+        text-align: left;
+        max-width: 800px;
+        margin-bottom: 60px;
+      }
+
+      .features h2 {
+        color: #ffc107;
+        margin-bottom: 10px;
+      }
+
+      .features ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      .hint-bubble {
+        position: fixed;
+        right: 95px;
+        bottom: 110px;
+        background-color: #00bcd4;
+        color: #000;
+        padding: 10px 14px;
+        border-radius: 20px;
+        font-size: 0.9em;
+        font-weight: bold;
+        animation: pulse 1.8s infinite;
+        z-index: 998;
+      }
+
+      .arrow {
+        position: fixed;
+        right: 60px;
+        bottom: 90px;
+        font-size: 1.5em;
+        animation: bounce 1.5s infinite;
+        z-index: 998;
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
+
+      .features li {
+        background-color: #1e1e1e;
+        margin: 8px 0;
+        padding: 10px 15px;
+        border-radius: 5px;
+        border-left: 4px solid #00bcd4;
+      }
+
+      df-messenger {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+      }
+    </style>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  </head>
+  <div class="hint-bubble">Click to chat with AquaBasic!</div>
+  <div class="arrow">👇</div>
+
+  <body>
+    <h1>AquaBasic</h1>
+    <p class="description">
+      AquaBasic is a simple chatbot built as a practice project. It can convert
+      USD and Euro to BDT and handle basic small talk. While this version is
+      limited, it proves how such bots can be expanded into full-featured
+      assistants for any application.
+    </p>
+    <div class="features">
+      <h2>What AquaBasic Can Do:</h2>
+      <ul>
+        <li>Convert USD to BDT</li>
+        <li>Convert EUR to BDT</li>
+        <li>Answer basic questions like "Who are you?"</li>
+        <li>Talk about cricket, weather, and more</li>
+        <li>Respond to "Help me", "What's your name?" and similar prompts</li>
+      </ul>
+    </div>
+
+    <df-messenger
+      intent="WELCOME"
+      chat-title="AquaBasic"
+      agent-id="6cd5dea3-e870-4bbb-a769-df5e52a56aa1"
+      language-code="en"
+    >
+    </df-messenger>
+  </body>
+</html>

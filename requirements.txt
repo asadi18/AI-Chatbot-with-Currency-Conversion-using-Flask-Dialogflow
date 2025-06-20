@@ -1,5 +1,3 @@
 flask
 gunicorn
 requests
-request
-jsonify

@@ -8,7 +8,7 @@ This project is designed to demonstrate how a simple chatbot can be deployed wit
 
 ## 🚀 Live Demo
 
-🔗 [Visit AquaBasic Chatbot (Deployed on Render)](link-here after deployment I will add)
+🔗 [Visit AquaBasic Chatbot (Deployed on Render)](https://ai-chatbot-with-currency-conversion.onrender.com/)
 
 ---
 
